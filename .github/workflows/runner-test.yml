@@ -1,0 +1,13 @@
+name: Assignment 7 Runner Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test-runner:
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify runner
+        run: echo "Assignment 7 self-hosted runner is working!"
